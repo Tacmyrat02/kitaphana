@@ -10,7 +10,7 @@ from base.models import Book, Card, Record
 def home(request):
     users = Card.objects.all()
     context = {'users': users}
-    return render(request, 'base.html', context=context)
+    return render(request, 'index.html', context=context)
 
 
 def users(request):
