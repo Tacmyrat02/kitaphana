@@ -6,6 +6,5 @@ from base.models import Book, Card, Record
 admin.site.register(Card)
 admin.site.register(Book)
 admin.site.register(Record)
-admin.site.unregister(Group)
-admin.site.unregister(User)
+admin.site.register(Group)
 admin.site.register(User)
