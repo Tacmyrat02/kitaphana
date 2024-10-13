@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% load static %}{% block content %}
+<div class="maincontdv">
+  <div class="kitapgos">
+    <h3>Kitap goş</h3>
+    <div class="kitapgoscont">
+      <a href="{% url 'add_book' %}">
+        <img src="{% static 'images/8TGb5E59c.png' %}" alt="" />
+      </a>
+    </div>
+  </div>
+  <div class="kitapgos">
+    <h3>Ulanyjy goş</h3>
+    <div class="kitapgoscont">
+      <a href="">
+        <img src="{% static 'images/8TGb5E59c.png' %}" alt="" />
+      </a>
+    </div>
+  </div>
+  <div class="kitapgos">
+    <h3>Kitapça döret</h3>
+    <div class="kitapgoscont">
+      <a href="{% url 'add_user' %}"">
+        <img src="{% static 'images/8TGb5E59c.png' %}" alt="" />
+      </a>
+    </div>
+  </div>
+  <div class="kitapgos">
+    <h3>Kitapçalar</h3>
+    <div class="kitapgoscont">
+      <a href=''>
+        <img src="{% static 'images/8TGb5E59c.png' %}" alt="" />
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %} {% for book in books %}
+<div class="bookmn">
+  <div class="bookmain">
+    <div class="bookimg">
+      <img src="{{book.image.url}}" alt="" />
+      <h3>{{book.name}}</h3>
+    </div>
+    <div class="bookinfo">
+      <p>ID: {{book.id}}</p>
+      <p>Kategoriýa: {{book.category}}</p>
+      <p>Awtory: {{book.author}}</p>
+      <p>Kitabyň umumy sany: {{book.allNumber}}</p>
+      <p>Kitaphanadaky sany: {{book.currentNumber}}</p>
+      <p>Çap edilen senesi: {{book.pubDate}}</p>
+      <a href="{% url 'delete_book' book.id %}">Kitaby poz</a>
+    </div>
+  </div>
+</div>
+{% endfor %} {% endblock content %}

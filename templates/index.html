@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="maincontdv">
+  <a href="{%url 'login'%}" style="color:black;text-decoration: none;">Admin Login</a>
+  <div class="adminlog" style="background: #ffff;border-radius: 20px;padding: 20px;">
+    <div class="addsr">
+      <form action="{% url 'user' %}">
+        <h3>Ulanyjy ID</h3>
+        <input type="number" placeholder="ID'ňyzy girizip öz kitaplaryňyzy görüň" name="id" />
+        <button>Gor</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

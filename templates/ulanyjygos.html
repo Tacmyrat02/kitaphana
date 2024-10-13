@@ -1,0 +1,37 @@
+{% extends 'base.html' %}{% block content %}
+<div class="dfs">
+  <h3>Ulanyjy goşuň</h3>
+  <div class="addsr">
+    <form
+      action="{% url 'add_user_object' %}"
+      method="POST"
+      className="form-group"
+    >
+      {% csrf_token %}
+      <p>Ady:</p>
+      <input placeholder="Ady..." type="text" name="username" />
+      <p>Fakulteti:</p>
+      <select name="fakultet">
+        <option disabled selected>
+          <p>Sayla</p>
+        </option>
+        <option>Fakultet 1</option>
+        <option>Fakultet 2</option>
+        <option>Fakultet 3</option>
+        <option>Fakultet 4</option>
+      </select>
+      <p>Kursy:</p>
+      <input placeholder="Kursy..." type="number" name="kurs" /> <br />
+      <p>Hünäri:</p>
+      <input placeholder="Hünäri..." name="profession" />
+      <p>Doglan senesi:</p>
+      <input placeholder="Dogluan senesi..." type="date" name="birthDate" />
+      <p>Yasayan yeri:</p>
+      <input placeholder="Öý salgysy..." name="address" /> <br />
+      <p>Telefon Nomeri:</p>
+      <input placeholder="Telefon nomeri..." type="number" name="phoneNumber" />
+      <button className="btn btn-primary">Gos</button>
+    </form>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block content %}
+<div class="dfs">
+  <h3>Kitap goşuň</h3>
+  <div class="addsr">
+    <form
+      action="{% url 'add_book_object' %}"
+      method="POST"
+      className="form-group"
+      enctype="multipart/form-data"
+    >
+      {% csrf_token %}
+      <p>Kitabyň ady:</p>
+      <input placeholder="Ady..." type="text" name="name" />
+      <p>Kategorýasy:</p>
+      <select name="category">
+        <option disabled selected>
+          <p>Sayla</p>
+        </option>
+        <option name="kat1">Kat 1</option>
+        <option name="kat2">Kat 2</option>
+        <option name="kat3">Kat 3</option>
+        <option name="kat4">Kat 4</option>
+      </select>
+      <p>Kitabyň sany:</p>
+      <input placeholder="Kitabyň sany..." type="number" name="allNumber" />
+      <p>Kitabyň awtory:</p>
+      <input placeholder="Kitabyň awtory..." name="author" />
+      <p>Çap edilen senesi:</p>
+      <input placeholder="Çap edilen senesi..." type="date" name="pubDate" />
+      <p>Kitabyň suraty:</p>
+      <input placeholder="Suarty giriziň" type="file" name="image" /> <br />
+      <br />
+      <button className="btn btn-primary">Gos</button>
+    </form>
+  </div>
+</div>
+{% endblock content %}

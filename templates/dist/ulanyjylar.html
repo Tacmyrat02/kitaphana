@@ -1,0 +1,40 @@
+{% extends 'base.html' %}{% block content %}
+<div class="maincontdv">
+  <div>
+    <h1>Ulanyjylar</h1>
+    <table className="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Ulanyjy ady</th>
+          <th scope="col">Fakulteti</th>
+          <th scope="col">Kursy</th>
+          <th scope="col">Hünäri</th>
+          <th scope="col">Doglan Senesi</th>
+          <th scope="col">Ýaşaýan ýeri</th>
+          <th scope="col">Nomeri</th>
+          <th scope="col">Kitaplarynyň mukdary</th>
+          <th scope="col">Ulanyjyny poz</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+        <tr>
+          <td>{{user.id}}</td>
+          <td><a href="{% url 'user' user.id %}">{{user.username}}</a></td>
+          <td>{{user.fakultet}}</td>
+          <td>{{user.kurs}}</td>
+          <td>{{user.profession}}</td>
+          <td>{{user.birthDate}}</td>
+          <td>{{user.address}}</td>
+          <td>{{user.phoneNumber}}</td>
+          <td>{{user.recordsUser.count}}</td>
+         <td> <a href="{% url 'delete_user' user.id %}">Ulanyjyny poz</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <a href="{% url 'add_user' %}">Ulanyjy gos</a>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tkm">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <div class="logo">
+          <img src="{% static 'images/logo.png' %}" alt="" />
+        </div>
+        <div class="search">
+          <input type="text" placeholder="search" />
+        </div>
+        <div class="admin">
+          <img src="{% static 'images/admin.png' %}" alt="" />
+        </div>
+      </div>
+      <div class="cont">
+        {% if request.session.auth %}
+        <div class="sidebar">
+          <div class="sidehead">
+            <h3>Title</h3>
+          </div>
+          <div class="sidecont">
+            <a href="{% url 'books' %}">Kitaplar</a>
+            <a href="{% url 'users' %}">Sazlamalar</a>
+            {% comment %} <a href="{% url '' %}">Ulanyjylar</a>
+            <a href="{% url 'add_record' %}">Kitapça döret</a>
+            <a href="{% url 'add_user' %}">Ulanyjy goş</a> {% endcomment %}
+            <a href="{% url 'add_book' %}">Kitap goş</a>
+            <a href="{% url 'about' %}">Barada</a>
+          </div>
+        </div>
+        {%endif%}
+        <div class="maincont">{% block content %} {% endblock content %}</div>
+      </div>
+    </div>
+  </body>
+</html>
