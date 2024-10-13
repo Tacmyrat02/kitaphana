@@ -29,7 +29,7 @@ def books(request):
                 book.allNumber) - int(book.recordsBook.count()))
         context = {'books': books}
         return render(request, 'kitaplar.html', context=context)
-    return redirect('home')
+    return redirect('books')
 
 
 def records(request):
