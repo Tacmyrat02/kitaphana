@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="maincontdv">
+  <div class="dfs">
+    <h3>Kitaça döret / Ulanyja kitap goş</h3>
+    <form
+      action="{% url 'add_record_object' %}"
+      method="post"
+      className="form-group"
+    >
+      {% csrf_token %}
+      <div class="addsr">
+      <p>Ulanyjy ID:</p>
+      <input placeholder="Ulanyjynyň ID'syny giriziň" type="text" name="user" />
+      <br />
+      <p>Kitap ID:</p>
+      <input placeholder="Kitabyň ID'syny giriziň" type="text" name="book" />
+      <button>Gos</button>
+    </div>
+    </form>
+  </div>
+</div>
+{% endblock content %}

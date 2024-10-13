@@ -1,0 +1,68 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div></div>
+{% for user in users %}
+<div class="bookmain">
+  <div class="divv">
+    <h3>Ulanyjy maglumatlar</h3>
+    <div class="bookinfo" style="margin-right: 20px">
+      <p>
+        Ulanyjy ady: <a style="color: #fff6d8;" href="{% url 'user' user.id %}">{{user.username}}</a>
+      </p>
+      <p>ID: {{user.id}}</p>
+      <p>Fakultet: {{user.fakultet}}</p>
+      <p>Hünär: {{user.profession}}</p>
+      <p>Kurs: {{user.kurs}}</p>
+      <p>Tel: {{user.phoneNumber}}</p>
+    </div>
+  </div>
+  <div class="divv">
+    <h3>Kitap maglumatlar</h3>
+    <div class="bookinfo">
+      <p>Ulanyjydaky kitaplaryň umumy sany: {{user.recordsUser.count}}</p>
+      <p>Soňky alan kitaby: {{user.recordsUser.last.book.name}}</p>
+      <p>Soňky kitap alan senesi: {{user.recordsUser.last.date}}</p>
+      <p style="color: #fff6d8; cursor: pointer;text-decoration: underline;" onclick="func({{user.id}})">
+        Şu ýere basyp ulanyjydaky hemme kitaplary gör
+      </p>
+    </div>
+    <div style="display: none" id="{{user.id}}" class="di">
+      <div class="dititle">
+        <h3>Ulanyjynyň kitaplary</h3>
+        <p onclick="func({{user.id}})">x</p>
+      </div>
+      <div class="dicont">
+        {% for record in user.recordsUser.all %}
+        <div style="background-color: #3a3a3a" class="bookmn">
+          <div class="bookmain">
+            <div class="bookimg">
+              <img src="{{record.book.image.url}}" alt="" />
+              <h3>Kitabyn ady</h3>
+            </div>
+            <div class="bookinfo">
+              <p>ID: {{record.book.id}}</p>
+              <p>Kategoriýa: {{record.book.name}}</p>
+              <p>Ulanyjynyň kitaby alan senesi: {{record.date}}</p>
+              <p>Çap edilen senesi: {{record.book.pubDate}}</p>
+            </div>
+            <a href="{% url 'delete_record' record.id %}"
+              >Kitaby ulanyjydan aýyr</a
+            >
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+<script>
+  function func(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
+{% endblock content %}

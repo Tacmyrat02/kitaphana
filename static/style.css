@@ -1,0 +1,446 @@
+@font-face {
+  font-family: tttravelsnextblack;
+  src: url("static\font\tttravelsnextblack.ttf");
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font-family: tttravelsnextblack;
+}
+a {
+  color: #000000;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #323232;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #595959;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #686868;
+}
+
+body {
+  background: #ffff;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+.navbar {
+  background: #ffff;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: rgb(9 30 66 / 25%) 2px 0px 8px -2px,
+    rgb(9 30 66 / 8%) 0px 0px 0px 1px;
+}
+
+.sidebar {
+  height: 100%;
+  display: flex;
+  background: #ffff;
+  width: auto;
+  min-width: 200px;
+  margin-top: 20px;
+  border-radius: 10px;
+  flex-direction: column;
+  margin-left: 7px;
+  padding: 20px;
+  box-shadow: rgb(9 30 66 / 25%) 0px 4px 8px -2px,
+    rgb(9 30 66 / 8%) 0px 0px 0px 1px;
+}
+
+.maincont {
+  height: auto;
+  width: auto;
+  margin: 20px 0 0 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.admin img {
+  filter: brightness(0.5);
+  height: 40px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.logo img {
+  filter: brightness(0.8);
+  margin-top: 3px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+.search input {
+  margin-top: 5px;
+  padding: 10px;
+  outline: none;
+  background: #f6f6f6;
+  border: none;
+  border-radius: 20px;
+  height: 20px;
+  width: 311px;
+  color: black;
+}
+
+.sidecont {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.sidecont a {
+  display: flex;
+  height: 25px;
+  padding: 10px;
+  width: 100%;
+  text-decoration: none;
+  border-radius: 10px;
+  color: #000000;
+}
+
+.sidecont a:hover {
+  background: #f6f6f6;
+  color: black;
+}
+
+.cont {
+  display: flex;
+}
+
+.kitapgos {
+  width: 240px;
+  height: 300px;
+  background: #ffff;
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 150px;
+  margin-bottom: 90px;
+  box-shadow: rgb(9 30 66 / 25%) 0px 4px 8px -2px,
+    rgb(9 30 66 / 8%) 0px 0px 0px 1px;
+}
+
+.maincontdv {
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.kitapgos h3 {
+  margin: 0;
+  height: 55px;
+}
+
+.kitapgoscont img {
+  height: 150px;
+  margin-top: 30px;
+}
+
+.bookimg img {
+  margin-right: 10px;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.bookimg h3 {
+  text-align: center;
+}
+
+.bookmain {
+  margin-left: 10px;
+  height: 303px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background: #ffff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: rgb(9 30 66 / 25%) 0px 4px 8px -2px,
+    rgb(9 30 66 / 8%) 0px 0px 0px 1px;
+}
+
+.bookmain button {
+  top: 297px;
+  left: 316px;
+  position: absolute;
+  background: wheat;
+  height: 37px;
+  width: 112px;
+  border-radius: 10px;
+  border: none;
+}
+
+.bookinfo {
+  border-radius: 20px;
+  padding: 20px;
+  background: #f6f6f6;
+  height: 230px;
+}
+
+.bookmn {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.divv h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.di {
+  top: 20px;
+  left: 20px;
+  position: absolute;
+  background: #efefefef;
+  padding: 10px;
+}
+
+.dititle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dititle p {
+  cursor: pointer;
+  margin-top: -24px;
+  font-size: 25px;
+  margin-right: 11px;
+}
+
+.dicont {
+  overflow-y: scroll;
+  height: 600px;
+}
+
+.dfs {
+  display: flex;
+  background: #ffff;
+  padding: 20px;
+  border-radius: 20px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgb(9 30 66 / 25%) 0px 4px 8px -2px,
+    rgb(9 30 66 / 8%) 0px 0px 0px 1px;
+}
+
+.addsr input {
+  padding: 7px;
+  width: 300px;
+  background: #f6f6f6;
+  height: 25px;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  outline: none;
+}
+
+.addsr p {
+  margin: 10px 0 10px 10px;
+}
+
+.addsr select {
+  background: #ffff;
+  color: black;
+  border: none;
+  height: 29px;
+  outline: none;
+  border-radius: 6px;
+}
+
+.addsr button {
+  border: none;
+  margin-top: 49px;
+  background: #f6f6f6;
+  border-radius: 7px;
+  color: black;
+  height: 40px;
+  width: 62px;
+  float: right;
+  margin-left: -65px;
+}
+
+.bookmncnt {
+  height: auto;
+  width: auto;
+  margin: 20px 0 0 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.usrtbl {
+  box-shadow: rgb(9 30 66 / 25%) 2px 0px 8px -2px,
+    rgb(9 30 66 / 8%) 0px 0px 0px 1px;
+  display: block;
+  background: #ffff;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.usrtbl h1 {
+  text-align: center;
+  margin-top: 9px;
+}
+
+.usrtbl table {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.usrtbl tr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.usrtbl tbody {
+  margin-left: 25px;
+}
+
+.usrtbl td {
+  margin-top: 7px;
+}
+
+.usrtbl th {
+  margin-top: 7px;
+}
+
+.usraddbtn {
+  text-decoration: none;
+  border: none;
+  margin-top: 22px;
+  background: #f6f6f6;
+  border-radius: 7px;
+  color: black;
+  height: 40px;
+  width: 62px;
+  float: right;
+  text-align: center;
+  padding: 5px;
+}
+
+.adminlog {
+  background: #ffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: rgb(9 30 66 / 25%) 0px 4px 8px -2px,
+    rgb(9 30 66 / 8%) 0px 0px 0px 1px;
+}
+.adminlog a {
+  color: #000000;
+  text-decoration: none;
+}
